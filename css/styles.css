@@ -1,0 +1,49 @@
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+#presentacion {
+    background-color: #242c4f;
+    color: #fff;
+}
+
+#contactos, #manual, #faq {
+    color: #333;
+}
+
+#busquedas h2 {
+    color: #3e5a7e;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-header {
+    background-color: #555;
+    color: #fff;
+}
+
+.card-body {
+    background-color: #fff;
+}
+
+.bg-gob {
+    background-color: #242c4f !important;
+    color: #fff !important;
+}
+
+.btn-gob {
+    background-color: #242c4f !important;
+    color: #fff !important;
+}
+
+.bg-gob-overlay {
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url('https://img.freepik.com/foto-gratis/disenadores-graficos-reunion_1170-2002.jpg?t=st=1720634895~exp=1720638495~hmac=1d43668ece531a3d2578c4d0d84aeb7cb09b1d68b50ba07331fcaae3eb8b3197&w=1380');
+    background-size: auto;
+    background-position: center;
+}
+
+.bg-gob-overlay p {
+    color: white; /* Color blanco para el texto */
+}
