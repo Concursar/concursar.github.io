@@ -38,28 +38,28 @@ function getJsonArrayFromData(data) {
                     puestosSet.add(datos[i].perfil);
 
                     let cardHtml = `
-    <div class="col-md-4 mb-3">
-        <div class="card">
-            <div class="card-header">
-            <div class="d-flex justify-content-between align-items-center">    
-                <div><b>${datos[i].perfil}</b></div>
-                <div><a href="#" class="btn btn-sm btn-gob">Postularme</a></div>
-            </div>
-            </div>
-            <div class="card-body">
-                <p><b>${datos[i].area}</b></p>
-                <p>ID: ${datos[i].id} | Vacantes: ${datos[i].vacante} | ${datos[i].fecha}</p>
-                <hr>
-                <small><b>Estudio:</b> ${datos[i].estudio}</small>
-                <small><b>Título:</b> ${datos[i].titulo}</small>
-                <small><b>Informática:</b> ${datos[i].informatica}</small>
-                <br>
-                <small><b>Alcance:</b> ${datos[i].alcance}</small>
-                <br>
-                <small><b>Tareas:</b> ${datos[i].tareas}</small>
-            </div>
+<div class="col-md-4 mb-3">
+    <div class="card">
+        <div class="card-header">
+        <div class="d-flex justify-content-between align-items-center">    
+            <div><strong>${datos[i].perfil}</strong></div>
+            <div><a href="#" class="btn btn-sm btn-gob">Postularme</a></div>
         </div>
-    </div>`;
+        </div>
+        <div class="card-body">
+            <p><strong>${datos[i].area}</strong></p>
+            <p>ID: ${datos[i].id} | Vacantes: ${datos[i].vacante} | ${datos[i].fecha}</p>
+            <hr>
+            <small><strong>Estudio:</strong> ${datos[i].estudio}</small>
+            <small><strong>Título:</strong> ${datos[i].titulo}</small>
+            <small><strong>Informática:</strong> ${datos[i].informatica}</small>
+            <br>
+            <small><strong>Alcance:</strong> ${datos[i].alcance}</small>
+            <br>
+            <small><strong>Tareas:</strong> ${datos[i].tareas}</small>
+        </div>
+    </div>
+</div>`;
 
                     showData.append(cardHtml);
                 }
