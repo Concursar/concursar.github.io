@@ -16,7 +16,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark bg-gob">
         <div class="container-fluid">
             <img src="assets/img/sello_ico.png" width="35" alt="" class="mx-3">
-            <a class="navbar-brand" href="#">Ingresar.gob.ar</a>
+            <a class="navbar-brand" href="#">Reclutar.gob.ar</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -81,6 +81,23 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
+                        <label for="cuil" class="form-label">CUIL</label>
+                        <input type="number" class="form-control" id="cuil" required>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="nacionalidad" class="form-label">Nacionalidad</label>
+                        <select class="form-select" id="nacionalidad" required>
+                            <option value="">Selecciona tu nacionalidad</option>
+                            <option value="argentina">Argentina</option>
+                            <option value="brasil">Brasil</option>
+                            <option value="chile">Chile</option>
+                            <option value="uruguay">Uruguay</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>                    
+                </div>
+                <div class="row">
+                    <div class="col-md-6 mb-3">
                         <label for="genero" class="form-label">Género</label>
                         <select class="form-select" id="genero" required>
                             <option value="">Selecciona tu género</option>
@@ -96,26 +113,16 @@
                 </div>
                 <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="nacionalidad" class="form-label">Nacionalidad</label>
-                        <select class="form-select" id="nacionalidad" required>
-                            <option value="">Selecciona tu nacionalidad</option>
-                            <option value="argentina">Argentina</option>
-                            <option value="brasil">Brasil</option>
-                            <option value="chile">Chile</option>
-                            <option value="uruguay">Uruguay</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="cv" class="form-label">Adjuntar CV (PDF)</label>
-                        <input type="file" class="form-control" id="cv" accept="application/pdf" required>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6 mb-3">
                         <label for="direccion" class="form-label">Dirección</label>
                         <input type="text" class="form-control" id="direccion" required>
                     </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="telefono" class="form-label">Teléfono</label>
+                        <input type="tel" class="form-control" id="telefono" required>
+                    </div>
+                    
+                </div>
+                <div class="row">
                     <div class="col-md-6 mb-3">
                         <label for="nivel-educativo" class="form-label">Nivel Educativo</label>
                         <select class="form-select" id="nivel-educativo" required>
@@ -123,29 +130,26 @@
                             <option value="primaria">Primaria</option>
                             <option value="secundaria">Secundaria</option>
                             <option value="tecnico">Técnico</option>
+                            <option value="tecnico">Terciario</option>
                             <option value="universitario">Universitario</option>
                             <option value="postgrado">Postgrado</option>
                         </select>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-md-6 mb-3">
-                        <label for="estado-civil" class="form-label">Estado Civil</label>
-                        <select class="form-select" id="estado-civil" required>
-                            <option value="">Selecciona tu estado civil</option>
-                            <option value="soltero">Soltero/a</option>
-                            <option value="casado">Casado/a</option>
-                            <option value="divorciado">Divorciado/a</option>
-                            <option value="viudo">Viudo/a</option>
-                        </select>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                        <label for="telefono" class="form-label">Teléfono</label>
-                        <input type="tel" class="form-control" id="telefono" required>
-                    </div>
+                        <label for="cud" class="form-label">Número de CUD</label>
+                        <input type="number" class="form-control" id="cud">
+                    </div>              
                 </div>
-                <a href="./index.html" class="btn btn-secondary mt-3 w-25">volver</a>
-                <button type="submit" href="./index.html" class="btn btn-gob mt-3 w-25">Registrarme</button>
+                <div>
+                    <label for="cv" class="form-label">Adjuntar CV (PDF)</label>
+                    <input type="file" class="form-control" id="cv" accept="application/pdf" required>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-12 d-flex justify-content-end">
+                        <a href="./index.html" class="btn btn-secondary px-4 me-2">Volver</a>
+                        <button type="submit" class="btn btn-gob px-4">Registrarme</button>
+                    </div>
+                </div>                
             </form>
         </div>
     </section>
