@@ -47,3 +47,7 @@ body {
 .bg-gob-overlay p {
     color: white; /* Color blanco para el texto */
 }
+
+.blanco {
+    color: white;
+}
