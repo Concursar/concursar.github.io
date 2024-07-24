@@ -15,6 +15,10 @@ body {
     color: #3e5a7e;
 }
 
+#botones {
+    background-color: #f2f2f2;
+}
+
 .card {
     margin-bottom: 20px;
 }
@@ -39,7 +43,7 @@ body {
 }
 
 .bg-gob-overlay {
-    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url('https://img.freepik.com/foto-gratis/disenadores-graficos-reunion_1170-2002.jpg?t=st=1720634895~exp=1720638495~hmac=1d43668ece531a3d2578c4d0d84aeb7cb09b1d68b50ba07331fcaae3eb8b3197&w=1380');
+    background: linear-gradient(rgba(0,0,0, 0.7), rgba(0,0,0, 0.7)), url("../assets/img/background.jfif");
     background-size: auto;
     background-position: center;
 }
