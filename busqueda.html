@@ -1,24 +1,19 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon"
-        href="https://back.argentina.gob.ar/profiles/argentinagobar/themes/argentinagobar/argentinagobar_theme/favicon.ico"
-        type="image/vnd.microsoft.icon">
+    <link rel="shortcut icon" href="https://back.argentina.gob.ar/profiles/argentinagobar/themes/argentinagobar/argentinagobar_theme/favicon.ico" type="image/vnd.microsoft.icon">
     <title>Reclutar</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
 </head>
-
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-gob">
         <div class="container-fluid">
             <img src="assets/img/sello_ico.png" width="35" alt="" class="mx-3">
             <a class="navbar-brand" href="#">Reclutar.gob.ar</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -26,6 +21,9 @@
                     <!-- <li class="nav-item">
                         <a class="nav-link" href="#normativa">Normativa</a>
                     </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Inicio</a>
+                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#faq">Preguntas Frecuentes</a>
                     </li>
@@ -44,23 +42,40 @@
         <div class="row">
             <div class="col-lg-6 col-md-8 mx-auto">
                 <h1 class="blanco">Reclutar</h1>
-                <h3 class="blanco">Selección preliminar obligatoria y general para el acceso en sus diversos tipos de
-                    vinculación, garantizando un proceso justo y equitativo</h3>
+                <p>
+                    <a href="#" class="btn btn-gob my-2">Postúlate Ahora</a>
+                    <a href="#" class="btn btn-secondary my-2">Más Información</a>
+                </p>
             </div>
         </div>
     </section>
-
-    <section id="botones" class="py-3">
-        <div class="text-center">
-            <a href="/busqueda.html">
-                <img src="img/botones.jpg" class="img-fluid" alt="">
-            </a>
-        </div>
-    </section>
-
-    <section class="py-3">
-        <div class="text-center">
-            <img src="img/cards.jpg" class="img-fluid" alt="">
+    
+    <section id="busquedas" class="py-3 bg-light">
+        <div class="container">
+            <h2>Búsquedas</h2>
+            <div class="row mb-4">
+                <div class="col-md-4 mb-2 mb-md-0">
+                    <input type="text" class="form-control" id="search-input" placeholder="Buscar...">
+                </div>
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <select class="form-select" id="filter-area">
+                        <option value="">Filtrar por Área</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-2 mb-md-0">
+                    <select class="form-select" id="filter-puesto">
+                        <option value="">Filtrar por Puesto</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" class="btn btn-gob w-100" id="limpiar-filtros">Limpiar Filtros</button>
+                </div>
+            </div>
+           
+            <div class="row" id="cards-container">
+                <!-- Aquí se generarán dinámicamente las tarjetas -->
+            </div>
+            
         </div>
     </section>
 
@@ -79,12 +94,12 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/show-bd.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="js/scripts.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function () {
+        document.addEventListener("DOMContentLoaded", function() {
             const searchInput = document.getElementById("search-input");
             const filterArea = document.getElementById("filter-area");
             const filterPuesto = document.getElementById("filter-puesto");
@@ -124,7 +139,7 @@
             filterPuesto.addEventListener("change", displayCards);
 
             // Evento para limpiar filtros
-            document.getElementById('limpiar-filtros').addEventListener('click', function () {
+            document.getElementById('limpiar-filtros').addEventListener('click', function() {
                 searchInput.value = ''; // Limpiar el campo de búsqueda
                 filterArea.value = '';  // Limpiar filtro de área
                 filterPuesto.value = ''; // Limpiar filtro de puesto
@@ -133,5 +148,4 @@
         });
     </script>
 </body>
-
 </html>
