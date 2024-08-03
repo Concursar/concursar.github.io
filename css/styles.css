@@ -17,6 +17,20 @@ body {
     color: #3e5a7e;
 }
 
+.contenedor {
+    max-width: 800px;
+}
+
+/* Quitar el color de una etiqueta <a> */
+a.no-hover {
+    text-decoration: none;
+    color: inherit; /* Mantener el color original */
+  }
+a.no-hover:hover {
+    text-decoration: none;
+    color: inherit; /* Mantener el color original al hacer hover */
+}
+
 #botones {
     background-color: #f2f2f2;
 }
@@ -41,6 +55,13 @@ h1, h6 {
 .bg-gob {
     background-color: #242c4f !important;
     color: #fff !important;
+}
+
+.nav-link{
+    color: #fff;
+}
+.nav-link:hover{
+    color: #eab85f;
 }
 
 .btn-gob {
