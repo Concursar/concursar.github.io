@@ -51,10 +51,10 @@
                     <label for="examen" class="form-label">Selecciona el examen</label>
                     <select class="form-select" id="examen">
                         <option value="">Todos los exámenes</option>
-                        <option value="Nivel 1">Nivel 1</option>
-                        <option value="Nivel 2">Nivel 2</option>
-                        <option value="Nivel 3">Nivel 3</option>
-                        <option value="Nivel 4">Nivel 4</option>
+                        <option value="Administrativo">Administrativo</option>
+                        <option value="Servicios Generales">Servicios Generales</option>
+                        <option value="Ciencias Duras">Ciencias Duras</option>
+                        <option value="Ciencias Blandas">Ciencias Blandas</option>
                     </select>
                 </div>
             </form>
@@ -84,49 +84,49 @@
         document.addEventListener('DOMContentLoaded', function() {
             const turnos = [
                 // Datos para todo el mes de agosto de 2024
-                { examen: 'Nivel 1', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 8 },
-                { examen: 'Nivel 1', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 5 },
-                { examen: 'Nivel 1', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
-                { examen: 'Nivel 1', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 10 },
-                { examen: 'Nivel 1', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 2 },
-                { examen: 'Nivel 1', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 7 },
-                { examen: 'Nivel 1', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 1 },
-                { examen: 'Nivel 1', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 4 },
-                { examen: 'Nivel 1', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 0 },
-                { examen: 'Nivel 1', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 5 },
+                { examen: 'Administrativo', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 8 },
+                { examen: 'Administrativo', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 5 },
+                { examen: 'Administrativo', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
+                { examen: 'Administrativo', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 10 },
+                { examen: 'Administrativo', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 2 },
+                { examen: 'Administrativo', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 7 },
+                { examen: 'Administrativo', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 1 },
+                { examen: 'Administrativo', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 4 },
+                { examen: 'Administrativo', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 0 },
+                { examen: 'Administrativo', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 5 },
                 // Nivel 2
-                { examen: 'Nivel 2', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 6 },
-                { examen: 'Nivel 2', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 4 },
-                { examen: 'Nivel 2', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
-                { examen: 'Nivel 2', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 10 },
-                { examen: 'Nivel 2', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 1 },
-                { examen: 'Nivel 2', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 3 },
-                { examen: 'Nivel 2', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 0 },
-                { examen: 'Nivel 2', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 7 },
-                { examen: 'Nivel 2', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 5 },
-                { examen: 'Nivel 2', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 8 },
+                { examen: 'Servicios Generales', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 6 },
+                { examen: 'Servicios Generales', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 4 },
+                { examen: 'Servicios Generales', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
+                { examen: 'Servicios Generales', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 10 },
+                { examen: 'Servicios Generales', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 1 },
+                { examen: 'Servicios Generales', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 3 },
+                { examen: 'Servicios Generales', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 0 },
+                { examen: 'Servicios Generales', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 7 },
+                { examen: 'Servicios Generales', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 5 },
+                { examen: 'Servicios Generales', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 8 },
                 // Nivel 3
-                { examen: 'Nivel 3', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 2 },
-                { examen: 'Nivel 3', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 6 },
-                { examen: 'Nivel 3', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
-                { examen: 'Nivel 3', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 9 },
-                { examen: 'Nivel 3', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 4 },
-                { examen: 'Nivel 3', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 3 },
-                { examen: 'Nivel 3', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 5 },
-                { examen: 'Nivel 3', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 8 },
-                { examen: 'Nivel 3', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 0 },
-                { examen: 'Nivel 3', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 7 },
+                { examen: 'Ciencias Duras', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 2 },
+                { examen: 'Ciencias Duras', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 6 },
+                { examen: 'Ciencias Duras', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
+                { examen: 'Ciencias Duras', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 9 },
+                { examen: 'Ciencias Duras', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 4 },
+                { examen: 'Ciencias Duras', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 3 },
+                { examen: 'Ciencias Duras', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 5 },
+                { examen: 'Ciencias Duras', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 8 },
+                { examen: 'Ciencias Duras', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 0 },
+                { examen: 'Ciencias Duras', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 7 },
                 // Nivel 4
-                { examen: 'Nivel 4', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 5 },
-                { examen: 'Nivel 4', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 2 },
-                { examen: 'Nivel 4', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
-                { examen: 'Nivel 4', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 10 },
-                { examen: 'Nivel 4', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 1 },
-                { examen: 'Nivel 4', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 4 },
-                { examen: 'Nivel 4', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 0 },
-                { examen: 'Nivel 4', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 9 },
-                { examen: 'Nivel 4', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 5 },
-                { examen: 'Nivel 4', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 3 },
+                { examen: 'Ciencias Blandas', dia: 'Lunes', fecha: '2024-08-05', horario: '10:00', disponibilidad: 5 },
+                { examen: 'Ciencias Blandas', dia: 'Martes', fecha: '2024-08-06', horario: '11:30', disponibilidad: 2 },
+                { examen: 'Ciencias Blandas', dia: 'Miércoles', fecha: '2024-08-07', horario: '13:00', disponibilidad: 0 },
+                { examen: 'Ciencias Blandas', dia: 'Jueves', fecha: '2024-08-08', horario: '14:30', disponibilidad: 10 },
+                { examen: 'Ciencias Blandas', dia: 'Viernes', fecha: '2024-08-09', horario: '16:00', disponibilidad: 1 },
+                { examen: 'Ciencias Blandas', dia: 'Lunes', fecha: '2024-08-12', horario: '10:00', disponibilidad: 4 },
+                { examen: 'Ciencias Blandas', dia: 'Martes', fecha: '2024-08-13', horario: '11:30', disponibilidad: 0 },
+                { examen: 'Ciencias Blandas', dia: 'Miércoles', fecha: '2024-08-14', horario: '13:00', disponibilidad: 9 },
+                { examen: 'Ciencias Blandas', dia: 'Jueves', fecha: '2024-08-15', horario: '14:30', disponibilidad: 5 },
+                { examen: 'Ciencias Blandas', dia: 'Viernes', fecha: '2024-08-16', horario: '16:00', disponibilidad: 3 },
             ];
 
             const tableBody = document.getElementById('turnos-table-body');
